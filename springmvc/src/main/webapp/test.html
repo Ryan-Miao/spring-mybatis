@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+    <script src="js/jquery/jquery.js"></script>
+</head>
+<body>
+
+<input type="text" name="tel" id="tel" value="13146750961"><br/>
+<input type="text" name="password" id="password" value="123456"><br/>
+<input type="button" value="获取token和id" onclick="getToken();">
+
+<hr>
+uid:<input type="text" name="uid" id="uid" ><br>
+signature:<input type="text" id="signature"><br>
+ids:<input type="text" id="ids" value="1,2,3,73">
+<input type="button" value="关注" onclick="watch()" >
+
+
+<script>
+    function getToken(){
+        $.ajax({
+            type:"post",
+            url:"http://localhost:8080/app/login/loginByPass",
+            dataType:"json",
+            data:{tel:$("#tel").val(),password:$("#password").val()},
+            success: function(data){
+                var token = data.token;
+                var user = data.user;
+                $("#signature").val(token.signature);
+                $("#uid").val(user.id);
+            }
+        });
+    }
+
+    function watch(){
+        $.ajax({
+            type:"post",
+            url:"http://localhost:8080/app/user/watch",
+            dataType:"json",
+            data:{uid:$("#uid").val(),signature:$("#signature").val(),ids:$("#ids").val()},
+            success: function(data){
+                console.log(data);
+                var flag = data.flag;
+                console.log(flag);
+                var one = flag[73];
+                console.log(one);
+            }
+        });
+    }
+</script>
+</body>
+</html>
