@@ -53,10 +53,10 @@
 	<bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
 		<!-- 转换器 -->
 		<property name="converters">
-			<list>
+			<set>
 				<!-- 日期类型转换 -->
 				<bean class="cn.itcast.ssm.controller.converter.CustomDateConverter"/>
-			</list>
+			</set>
 		</property>
 		
 	

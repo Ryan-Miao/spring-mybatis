@@ -45,6 +45,7 @@ function queryItems(){
 <c:forEach items="${itemsList }" var="item" varStatus="status">
 <tr>	
 
+	<td><input name="itemsList[${status.index }].id" value="${item.id }"/></td>
 	<td><input name="itemsList[${status.index }].name" value="${item.name }"/></td>
 	<td><input name="itemsList[${status.index }].price" value="${item.price }"/></td>
 	<td><input name="itemsList[${status.index }].createtime" value="<fmt:formatDate value="${item.createtime}" pattern="yyyy-MM-dd HH:mm:ss"/>"/></td>

@@ -68,6 +68,8 @@ function queryItems(){
 </c:forEach>
 
 </table>
+
+	<a href="${pageContext.request.contextPath }/items/editItemsQuery.action">批量修改</a>
 </form>
 </body>
 

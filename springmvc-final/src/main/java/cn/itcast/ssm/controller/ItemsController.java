@@ -192,7 +192,7 @@ public class ItemsController {
 		if(items_pic!=null && originalFilename!=null && originalFilename.length()>0){
 			
 			//存储图片的物理路径
-			String pic_path = "F:\\develop\\upload\\temp\\";
+			String pic_path = "F:\\";
 			
 			
 			//新的图片名称
