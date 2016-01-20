@@ -24,12 +24,6 @@
         <processorPath useClasspath="true" />
         <module name="mybatis-sql" />
       </profile>
-      <profile default="false" name="Annotation profile for mybatis-spring" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-      </profile>
       <profile default="false" name="Annotation profile for springmvc" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -37,11 +31,27 @@
         <processorPath useClasspath="true" />
         <module name="springmvc" />
       </profile>
+      <profile default="false" name="Annotation profile for mybatis-spring" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="mybatis-spring" />
+      </profile>
+      <profile default="false" name="Annotation profile for springmvc-final" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="springmvc-final" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mybatis-spring" target="1.7" />
       <module name="mybatis-sql" target="1.7" />
       <module name="springmvc" target="1.7" />
+      <module name="springmvc-final" target="1.7" />
+      <module name="springmvc_final" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
